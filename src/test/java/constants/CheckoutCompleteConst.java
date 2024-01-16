@@ -8,6 +8,6 @@ public class CheckoutCompleteConst {
     public final static String DESCRIPTION = "Your order has been dispatched, and will arrive just as fast as the pony can get there!";
     public final static String BACK_HOME_BUTTON_TEXT = "Back Home";
 
-    //COLORS
+    //__________COLOR_CODES__________//
     public final static String BACK_HOME_BUTTON_COLOR = "#3ddc91";
 }

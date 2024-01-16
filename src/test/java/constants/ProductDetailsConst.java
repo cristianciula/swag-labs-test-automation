@@ -7,6 +7,6 @@ public class ProductDetailsConst {
     public final static String REMOVE_BUTTON = "Remove";
     public final static String PRODUCT_IMAGE = "https://www.saucedemo.com/static/media/bike-light-1200x1500.37c843b0.jpg";
 
-    //COLORS
+    //__________COLOR_CODES__________//
     public final static String REMOVE_BUTTON_TEXT_COLOR = "#e2231a";
 }

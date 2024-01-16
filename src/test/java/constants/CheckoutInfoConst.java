@@ -8,6 +8,6 @@ public class CheckoutInfoConst {
     public final static String ZIP_CODE_PLACEHOLDER = "Zip/Postal Code";
     public final static String CONTINUE_BUTTON_TEXT = "Continue";
 
-    //COLORS
+    //__________COLOR_CODES__________//
     public final static String CONTINUE_BUTTON_COLOR = "#3ddc91";
 }
