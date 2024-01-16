@@ -12,7 +12,7 @@ public class CheckoutInfoPage {
         this.driver = driver;
     }
 
-    //LOCATORS
+    //__________LOCATORS__________//
     private By pageTitleLabel = By.xpath("//span[@class=\"title\"]");
     private By cancelButton = By.id("cancel");
     private By continueButton = By.id("continue");
@@ -20,9 +20,7 @@ public class CheckoutInfoPage {
     private By lastNameInput = By.id("last-name");
     private By zipCodeInput = By.id("postal-code");
 
-
-
-    //ACTIONS
+    //__________METHODS__________//
     public String getPageTitle() {
         return driver.findElement(pageTitleLabel).getText();
     }

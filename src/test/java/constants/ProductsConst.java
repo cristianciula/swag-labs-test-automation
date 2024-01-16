@@ -1,6 +1,6 @@
-package messages;
+package constants;
 
-public class ProductsMessages {
+public class ProductsConst {
 
     public final static String PRODUCTS_PAGE_TITLE = "Products";
     public final static String ADD_TO_CART_BUTTON = "Add to cart";

@@ -15,7 +15,7 @@ public class ProductsPage {
         this.driver = driver;
     }
 
-    //LOCATORS
+    //__________LOCATORS__________//
     private By pageTitle = By.xpath("//span[@class=\"title\"]");
     private By productNameLabels = By.xpath("//div[@class=\"inventory_item_name\"]");
     private By productPriceLabels = By.xpath("//div[@class=\"inventory_item_price\"]");
@@ -43,7 +43,7 @@ public class ProductsPage {
         return By.xpath("//div[@class=\"inventory_item_name\"][contains(.,\""+productName+"\")]/following::button[contains(.,\"Remove\")][1]");
     }
 
-    //ACTIONS
+    //__________METHODS__________//
     public String getPageTitle() {
         return driver.findElement(pageTitle).getText();
     }

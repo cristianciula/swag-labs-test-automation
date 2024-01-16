@@ -14,7 +14,7 @@ public class CartPage {
         this.driver = driver;
     }
 
-    //LOCATORS
+    //__________LOCATORS__________//
     private By pageTitle = By.xpath("//span[@class=\"title\"]");
     private By productNameLabels = By.xpath("//div[@class=\"inventory_item_name\"]");
     private By productPrice(String productName) {
@@ -25,7 +25,7 @@ public class CartPage {
         return By.xpath("//div[@class=\"inventory_item_name\"][text()=\""+productName+"\"]/ancestor::div[@class=\"cart_item\"]/div[@class=\"cart_quantity\"]");
     }
 
-    //ACTIONS
+    //__________METHODS__________//
     public List<String> getAllProductsInCart() {
         List<WebElement> productsNamesLabels = driver.findElements(productNameLabels);
         List<String> productsNames = new ArrayList<>();
@@ -53,8 +53,6 @@ public class CartPage {
     public String getPageTitle() {
         return driver.findElement(pageTitle).getText();
     }
-
-    //TO BE USED IN FUTURE TESTS
     public String getCheckoutButtonColor() {
         String rgba = driver.findElement(checkoutButton).getCssValue("background-color");
         return ColorCodesUtils.rgbaToHex(rgba);

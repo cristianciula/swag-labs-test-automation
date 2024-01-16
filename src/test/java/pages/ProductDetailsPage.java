@@ -14,7 +14,7 @@ public class ProductDetailsPage {
         this.driver = driver;
     }
 
-    //LOCATORS
+    //__________LOCATORS__________//
     private By productName = By.xpath("//div[@class=\"inventory_details_name large_size\"]");
     private By productDescription = By.xpath("//div[@class=\"inventory_details_desc large_size\"]");
     private By productPrice = By.xpath("//div[@class=\"inventory_details_price\"]");
@@ -23,7 +23,7 @@ public class ProductDetailsPage {
     private By removeButton = By.xpath("//button[@class=\"btn btn_secondary btn_small btn_inventory\"]");
     private By productImage = By.xpath("//img[@class=\"inventory_details_img\"]");
 
-    //ACTIONS
+    //__________METHODS__________//
     public String getProductName() {
         return driver.findElement(productName).getText();
     }

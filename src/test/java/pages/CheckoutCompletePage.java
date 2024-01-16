@@ -11,14 +11,14 @@ public class CheckoutCompletePage {
         this.driver = driver;
     }
 
-    //LOCATORS
+    //__________LOCATORS__________//
     private By pageTitle = By.xpath("//span[@class=\"title\"]");
     private By checkmarkImage = By.xpath("//img[@class=\"pony_express\"]");
     private By header = By.xpath("//h2[@class=\"complete-header\"]");
     private By description = By.xpath("//div[@class=\"complete-text\"]");
     private By backHomeButton = By.id("back-to-products");
 
-    //ACTIONS
+    //__________METHODS__________//
     public String getPageTitle() {
         return driver.findElement(pageTitle).getText();
     }

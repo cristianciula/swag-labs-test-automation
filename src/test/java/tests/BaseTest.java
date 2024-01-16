@@ -3,7 +3,7 @@ package tests;
 import components.Header;
 import components.Menu;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import messages.LoginMessages;
+import constants.LoginConst;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -64,13 +64,14 @@ public class BaseTest {
 
         driver.get(URL.LOGIN_PAGE);
         assertTrue(loginPage.loginButtonIsEnabled());
-        assertEquals(LoginMessages.LOGIN_BUTTON_COLOR, loginPage.getLoginButtonColor());
-        assertEquals(LoginMessages.USERNAME_PLACEHOLDER, loginPage.getUsernamePlaceholder());
-        assertEquals(LoginMessages.PASSWORD_PLACEHOLDER, loginPage.getPasswordPlaceholder());
+        assertEquals(LoginConst.LOGIN_BUTTON_COLOR, loginPage.getLoginButtonColor());
+        assertEquals(LoginConst.USERNAME_PLACEHOLDER, loginPage.getUsernamePlaceholder());
+        assertEquals(LoginConst.PASSWORD_PLACEHOLDER, loginPage.getPasswordPlaceholder());
     }
     @AfterEach
     public void afterEach() {
         driver.manage().deleteAllCookies();
         driver.close();
+        driver.quit();
     }
 }

@@ -1,6 +1,6 @@
-package messages;
+package constants;
 
-public class LoginMessages {
+public class LoginConst {
 
     public final static String USERNAME_PLACEHOLDER = "Username";
     public final static String PASSWORD_PLACEHOLDER = "Password";

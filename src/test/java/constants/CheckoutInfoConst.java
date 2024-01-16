@@ -1,6 +1,6 @@
-package messages;
+package constants;
 
-public class CheckoutInfoMessages {
+public class CheckoutInfoConst {
 
     public final static String CHECKOUT_INFO_PAGE_TITLE = "Checkout: Your Information";
     public final static String FIRST_NAME_PLACEHOLDER = "First Name";

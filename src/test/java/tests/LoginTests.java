@@ -1,7 +1,7 @@
 package tests;
 
-import messages.LoginMessages;
-import messages.ProductsMessages;
+import constants.LoginConst;
+import constants.ProductsConst;
 import org.junit.jupiter.api.Test;
 import testdata.User;
 
@@ -18,7 +18,7 @@ public class LoginTests extends BaseTest {
         loginPage.enterPassword(standardUser.getPassword());
         loginPage.clickLogin();
 
-        assertEquals(ProductsMessages.PRODUCTS_PAGE_TITLE, productsPage.getPageTitle());
+        assertEquals(ProductsConst.PRODUCTS_PAGE_TITLE, productsPage.getPageTitle());
         assertTrue(header.shoppingCartButtonIsDisplayed());
         assertTrue(header.menuButtonIsDisplayed());
         assertTrue(productsPage.sortingIsDisplayed());
@@ -30,8 +30,8 @@ public class LoginTests extends BaseTest {
         loginPage.enterPassword(wrongUser.getPassword());
         loginPage.clickLogin();
 
-        assertEquals(LoginMessages.INVALID_USER_LOGIN_ERROR, loginPage.getErrorMessage());
-        assertEquals(LoginMessages.LOGIN_ERROR_BACKGROUND_COLOR, loginPage.getErrorBackgroundColor());
+        assertEquals(LoginConst.INVALID_USER_LOGIN_ERROR, loginPage.getErrorMessage());
+        assertEquals(LoginConst.LOGIN_ERROR_BACKGROUND_COLOR, loginPage.getErrorBackgroundColor());
     }
 
     @Test
@@ -40,16 +40,16 @@ public class LoginTests extends BaseTest {
         loginPage.enterPassword(lockedOutUser.getPassword());
         loginPage.clickLogin();
 
-        assertEquals(LoginMessages.LOCKED_USER_LOGIN_ERROR, loginPage.getErrorMessage());
-        assertEquals(LoginMessages.LOGIN_ERROR_BACKGROUND_COLOR, loginPage.getErrorBackgroundColor());
+        assertEquals(LoginConst.LOCKED_USER_LOGIN_ERROR, loginPage.getErrorMessage());
+        assertEquals(LoginConst.LOGIN_ERROR_BACKGROUND_COLOR, loginPage.getErrorBackgroundColor());
     }
 
     @Test
     public void emptyCredentialsLogin() {
         loginPage.clickLogin();
 
-        assertEquals(LoginMessages.MISSING_USERNAME_ERROR, loginPage.getErrorMessage());
-        assertEquals(LoginMessages.LOGIN_ERROR_BACKGROUND_COLOR, loginPage.getErrorBackgroundColor());
+        assertEquals(LoginConst.MISSING_USERNAME_ERROR, loginPage.getErrorMessage());
+        assertEquals(LoginConst.LOGIN_ERROR_BACKGROUND_COLOR, loginPage.getErrorBackgroundColor());
     }
 
     @Test
@@ -57,14 +57,14 @@ public class LoginTests extends BaseTest {
         loginPage.enterUsername(standardUser.getUsername());
         loginPage.clickLogin();
 
-        assertEquals(LoginMessages.MISSING_PASSWORD_ERROR, loginPage.getErrorMessage());
-        assertEquals(LoginMessages.LOGIN_ERROR_BACKGROUND_COLOR, loginPage.getErrorBackgroundColor());
+        assertEquals(LoginConst.MISSING_PASSWORD_ERROR, loginPage.getErrorMessage());
+        assertEquals(LoginConst.LOGIN_ERROR_BACKGROUND_COLOR, loginPage.getErrorBackgroundColor());
     }
 
     @Test
     public void logout() {
         loginPage.authenticate(standardUser);
-        assertEquals(ProductsMessages.PRODUCTS_PAGE_TITLE, productsPage.getPageTitle());
+        assertEquals(ProductsConst.PRODUCTS_PAGE_TITLE, productsPage.getPageTitle());
         assertTrue(header.shoppingCartButtonIsDisplayed());
         assertTrue(header.menuButtonIsEnabled());
 

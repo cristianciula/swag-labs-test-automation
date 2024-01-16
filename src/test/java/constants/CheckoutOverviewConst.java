@@ -1,6 +1,6 @@
-package messages;
+package constants;
 
-public class CheckoutOverviewMessages {
+public class CheckoutOverviewConst {
 
     public final static String CHECKOUT_OVERVIEW_PAGE_TITLE = "Checkout: Overview";
     public final static String SHIPPING_INFORMATION = "Free Pony Express Delivery!";

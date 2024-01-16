@@ -14,13 +14,13 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    //LOCATORS
+    //__________LOCATORS__________//
     public By usernameInput = By.id("user-name");
     public By passwordInput = By.id("password");
     public By loginButton = By.id("login-button");
     public By errorMessage = By.xpath("//div[@class=\"error-message-container error\"]");
 
-    //ACTIONS
+    //__________METHODS__________//
     public boolean loginButtonIsEnabled() {
         return driver.findElement(loginButton).isEnabled();
     }

@@ -16,7 +16,7 @@ public class CheckoutOverviewPage {
         this.driver = driver;
     }
 
-    //LOCATORS
+    //__________LOCATORS__________//
     private By pageTitle = By.xpath("//span[@class=\"title\"]");
     private By productNameLabels = By.xpath("//div[@class=\"inventory_item_name\"]");
     private By productDescription(String productName) {
@@ -36,7 +36,7 @@ public class CheckoutOverviewPage {
     private By taxValueLabel = By.xpath("//div[@class=\"summary_tax_label\"]");
     private By totalLabel = By.xpath("//div[@class=\"summary_info_label summary_total_label\"]");
 
-    //ACTIONS
+    //__________METHODS__________//
     public String getPageTitle() {
         return driver.findElement(pageTitle).getText();
     }

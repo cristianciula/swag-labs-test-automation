@@ -1,6 +1,6 @@
-package messages;
+package constants;
 
-public class ProductDetailsMessages {
+public class ProductDetailsConst {
 
     public final static String BACK_TO_PRODUCTS_BUTTON = "Back to products";
     public final static String ADD_TO_CART_BUTTON_TEXT = "Add to cart";
