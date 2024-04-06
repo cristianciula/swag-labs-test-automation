@@ -1,6 +1,6 @@
 package testdata;
 
-import helpers.JsonReaderHelper;
+import helpers.JSONReaderHelper;
 
 public class Product {
 
@@ -9,9 +9,9 @@ public class Product {
     private double price;
 
     public Product(String fileName) {
-        this.name = JsonReaderHelper.json(fileName).get("name").toString();
-        this.description = JsonReaderHelper.json(fileName).get("description").toString();
-        this.price = (double) JsonReaderHelper.json(fileName).get("price");
+        this.name = JSONReaderHelper.extractValue(fileName, "name");
+        this.description = JSONReaderHelper.extractValue(fileName, "description");
+        this.price = Double.parseDouble(JSONReaderHelper.extractValue(fileName, "price"));
     }
 
     //GETTERS

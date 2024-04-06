@@ -17,7 +17,7 @@ public class ProductsPage {
 
     //__________LOCATORS__________//
     private By pageTitle = By.xpath("//span[@class=\"title\"]");
-    private By productNameLabels = By.xpath("//div[@class=\"inventory_item_name\"]");
+    private By productNameLabels = By.xpath("//div[@class=\"inventory_item_name \"]");
     private By productPriceLabels = By.xpath("//div[@class=\"inventory_item_price\"]");
     private By sortSelector = By.xpath("//select[@class=\"product_sort_container\"]");
     private By sortNameAZOption = By.xpath("//option[@value=\"az\"]");
@@ -25,22 +25,22 @@ public class ProductsPage {
     private By sortPriceLowToHighOption = By.xpath("//option[@value=\"lohi\"]");
     private By sortPriceHighToLowOption = By.xpath("//option[@value=\"hilo\"]");
     private By productName(String productName) {
-        return By.xpath("//div[@class=\"inventory_item_name\"][contains(.,\""+productName+"\")]");
+        return By.xpath("//div[@class=\"inventory_item_name \"][contains(.,\""+productName+"\")]");
     }
     private By productImage(String productName) {
         return By.xpath("//img[@class=\"inventory_item_img\"][@alt=\""+productName+"\"]");
     }
     private By productDescription(String productName) {
-        return By.xpath("//div[@class=\"inventory_item_name\"][text()=\""+productName+"\"]/following::div[@class=\"inventory_item_desc\"][1]");
+        return By.xpath("//div[@class=\"inventory_item_name \"][text()=\""+productName+"\"]/following::div[@class=\"inventory_item_desc\"][1]");
     }
     private By productPrice(String productName) {
-        return By.xpath("//div[@class=\"inventory_item_name\"][text()=\""+productName+"\"]/following::div[@class=\"inventory_item_price\"][1]");
+        return By.xpath("//div[@class=\"inventory_item_name \"][text()=\""+productName+"\"]/following::div[@class=\"inventory_item_price\"][1]");
     }
     private By addToCartButton(String productName) {
-        return By.xpath("//div[@class=\"inventory_item_name\"][contains(.,\""+productName+"\")]/following::button[1]");
+        return By.xpath("//div[@class=\"inventory_item_name \"][contains(.,\""+productName+"\")]/following::button[1]");
     }
     private By removeButton(String productName) {
-        return By.xpath("//div[@class=\"inventory_item_name\"][contains(.,\""+productName+"\")]/following::button[contains(.,\"Remove\")][1]");
+        return By.xpath("//div[@class=\"inventory_item_name \"][contains(.,\""+productName+"\")]/following::button[contains(.,\"Remove\")][1]");
     }
 
     //__________METHODS__________//

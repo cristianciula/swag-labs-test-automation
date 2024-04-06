@@ -3,6 +3,7 @@ package tests;
 import constants.LoginConst;
 import constants.ProductsConst;
 import org.junit.jupiter.api.Test;
+import testdata.Product;
 import testdata.User;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class LoginTests extends BaseTest {
     public static User wrongUser = new User("wrongUser");
     public static User lockedOutUser = new User("lockedOutUser");
+    public static Product product = new Product("product");
 
     @Test
     public void validUserLogin() {

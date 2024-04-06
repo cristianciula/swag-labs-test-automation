@@ -1,6 +1,5 @@
 package testdata;
-
-import helpers.JsonReaderHelper;
+import helpers.JSONReaderHelper;
 
 public class UserData {
 
@@ -10,10 +9,10 @@ public class UserData {
     private String cardDetails;
 
     public UserData(String fileName) {
-        this.firstName = JsonReaderHelper.json(fileName).get("firstName").toString();
-        this.lastName = JsonReaderHelper.json(fileName).get("lastName").toString();
-        this.zipCode = JsonReaderHelper.json(fileName).get("zipCode").toString();
-        this.cardDetails = JsonReaderHelper.json(fileName).get("cardDetails").toString();
+        this.firstName = JSONReaderHelper.extractValue(fileName, "firstName");
+        this.lastName = JSONReaderHelper.extractValue(fileName, "lastName");
+        this.zipCode = JSONReaderHelper.extractValue(fileName, "zipCode");
+        this.cardDetails = JSONReaderHelper.extractValue(fileName, "cardDetails");
     }
 
     //GETTERS

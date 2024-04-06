@@ -1,7 +1,7 @@
 package testdata;
 
+import helpers.JSONReaderHelper;
 import utils.RandomizerUtils;
-import helpers.JsonReaderHelper;
 
 public class User {
 
@@ -9,8 +9,8 @@ public class User {
     private String password;
 
     public User(String fileName) {
-        this.username = JsonReaderHelper.json(fileName).get("username").toString();
-        this.password = JsonReaderHelper.json(fileName).get("password").toString();
+        this.username = JSONReaderHelper.extractValue(fileName, "username");
+        this.password = JSONReaderHelper.extractValue(fileName, "password");
     }
 
     //GETTERS
