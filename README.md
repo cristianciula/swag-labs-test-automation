@@ -1,1 +1,1 @@
-# Test-Automation-Project-1
+# Test Automation Project for SwagLabs.com
