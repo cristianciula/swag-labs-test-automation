@@ -2,10 +2,10 @@
 
 This is my very first test automation project using Java and Selenium Webdriver. It was created during my "Test Automation Course" at "Scoala Informala de IT" as a final project.
 
-Framework: Selenium, Java, Junit
-Design: Page Object Model (POM)
-Parallel Execution: NO
-Test Execution Reporting:
+- Framework: Selenium, Java, Junit
+- Design: Page Object Model (POM)
+- Parallel Execution: NO
+- Execution Reporting:
   - Console: YES
   - XML: NO
   - HTML: NO
