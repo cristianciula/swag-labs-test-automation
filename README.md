@@ -4,10 +4,10 @@ This is my very first test automation project using Java and Selenium Webdriver.
 
 Framework: Selenium, Java, Junit
 Design: Page Object Model (POM)
-Parallel Testing: No
-Test Reports:
-  - Console: Yes
-  - XML: No
-  - HTML: No
+Parallel Execution: NO
+Test Execution Reporting:
+  - Console: YES
+  - XML: NO
+  - HTML: NO
   
 
