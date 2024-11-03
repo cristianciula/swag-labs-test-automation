@@ -6,7 +6,7 @@ Framework: Selenium, Java, Junit
 Design: Page Object Model (POM)
 Parallel Testing: No
 Test Reports:
-  - Console/Text: Yes
+  - Console: Yes
   - XML: No
   - HTML: No
   
